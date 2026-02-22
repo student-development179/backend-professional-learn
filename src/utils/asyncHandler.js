@@ -1,8 +1,8 @@
 //this are also good both are same but as per compony choices....
 const asyncHandler = (RequestHandler) => {
-    (req, res, next) => {
+    return (req, res, next) => {
         Promise.resolve(RequestHandler(req, res, next)).
-        catch((err) => next(err))
+        catch((err) => next(err))   
     }}
 
 export { asyncHandler }
